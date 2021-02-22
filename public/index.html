@@ -5,8 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortener</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="./static/style.css">
+    
 </head>
-<body>
-    Hello Aanchal
+<body onload="printurl()">
+    <nav class="navbar navbar-default">
+        <div class="container-fuild">
+            <div class="navbar-header">
+                <a href="index.html"><h3>Url Shortener  <i class="fas fa-tools" style="color: grey;"></i></h3></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Url Shortener</h2>
+        <div class="content-box">
+          
+            <input type="text" name="url" id="url" placeholder="Shorten your link" required>
+            <input type="button" value="Shorten" id="shorten">
+        
+        </div>
+        <div class="content-box">
+           <div>
+               <label for="longurl"> Long url</label>
+               <input type="text" name="longurl" id="longurl">
+               <label for="shorturl">Short URL</label>
+               <input type="text" name="shorturl" id="shorturl">
+               <input type="button" value="Copy" id="copy">
+           </div>
+            <!--li class="output">
+                <span class="longurl" id ="longurl">
+
+                </span>
+                <span class = "shorturl" id ="shorturl"></span>
+                <span class="copy-button">
+                    <input type="button" value="Copy" id="copy">
+                </span>
+            </li-->
+        </div>
+        <div class="content-box">
+            <div class="urlPrint">
+                
+            </div>
+
+           
+        </div>
+    </div>
+    <script src="./static/js/script.js"></script>
 </body>
 </html>

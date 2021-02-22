@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #f0f0f0;
+  font-family: 'Crimson Text', serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.output {
+  list-style: none;
+}
+
+/* .content-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+input[type=text],
+select {
+  padding: 0.5rem;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 72%;
+  margin-right: 20px;
+  margin-bottom: 0;
+  height: 60px;
+  font-size: 2rem;
+  background: #fff;
+}
+
+input[type=button],
+select {
+  padding: 0.5rem;
+  display: inline-block;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background: grey;
+  text-decoration: solid;
+  text-align: center;
+  color: black;
+  margin: 1rem;
+  width: 120px;
+  height: 45px;
+  line-height: 1.6;
+}
