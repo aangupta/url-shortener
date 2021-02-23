@@ -17,6 +17,13 @@ body {
   flex-direction: column;
 }
 
+.content-box {
+  margin: 4rem;
+  background: white;
+  padding: 2rem;
+  width: 100%;
+}
+
 .output {
   list-style: none;
 }
@@ -36,10 +43,10 @@ select {
   border-radius: 8px;
   box-sizing: border-box;
   width: 72%;
-  margin-right: 20px;
+  margin-right: 1.5rem;
   margin-bottom: 0;
-  height: 60px;
-  font-size: 2rem;
+  height: 3.75px;
+  font-size: 15px;
   background: #fff;
 }
 
@@ -49,12 +56,80 @@ select {
   display: inline-block;
   border-radius: 3px;
   box-sizing: border-box;
-  background: grey;
+  background: #d3d3d3;
   text-decoration: solid;
   text-align: center;
   color: black;
   margin: 1rem;
   width: 120px;
   height: 45px;
-  line-height: 1.6;
+  font-size: medium;
+}
+
+.urlPrint {
+  display: flex;
+  flex-direction: column;
+}
+
+.urlPrint-header {
+  display: grid;
+  grid-template-columns: 820px 120px;
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 20px;
+  margin: 2rem;
+  text-align: center;
+}
+
+.urlPrint-body {
+  display: grid;
+  grid-template-columns: 820px 120px;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  text-align: left;
+  padding: 1rem;
+  margin: 2rem;
+  font-size: 15px;
+}
+
+.longurlresult {
+  display: inline-block;
+}
+
+.content-box-input {
+  margin: 2rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.content-box-input input[type=text],
+select {
+  padding: 0.5rem;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 82%;
+  margin-right: 20px;
+  margin-bottom: 0;
+  height: 60px;
+  background: #fff;
+  font-size: 15px;
+}
+
+.content-box-output {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.content-search-input {
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.content-search-output {
+  margin: 2rem;
+  padding: 1rem;
 }
