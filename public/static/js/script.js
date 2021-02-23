@@ -5,7 +5,7 @@ document.querySelector('#shorten').addEventListener('click', () => {
     console.log(url);
     if (url === '') alert('Enter the URL');
     else {
-        fetch('http://localhost:3000/api/urls/', {
+        fetch('./api/urls/', {
             method: 'POST',
             body: JSON.stringify({
                 longUrl: url,
@@ -30,7 +30,7 @@ document.querySelector('#shorten').addEventListener('click', () => {
 });
 
 function printurl() {
-    fetch('http://localhost:3000/api/urls/')
+    fetch('./api/urls/')
         .then((response) => response.json())
         .then((urls) => {
             urls.forEach((element) => {
@@ -50,7 +50,7 @@ function printurl() {
 }
 
 document.querySelector('#search').addEventListener('click', () => {
-    const url = new URL('http://localhost:3000/api/urls/');
+    const url = new URL('./api/urls/');
     const searchurl = document.querySelector('#searchurl');
     const param = { id: searchurl.value };
     Object.keys(param).forEach((key) => {
