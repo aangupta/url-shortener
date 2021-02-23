@@ -25,10 +25,7 @@ router.get('/:id', (req, res) => {
     const { id } = req.params;
     const longUrl = urls[req.params.id];
     if (longUrl) {
-        res.status(200).send({
-            id,
-            longUrl,
-        });
+        res.status(200).send([id, longUrl]);
     } else {
         res.status(404).send('url shortener id not found');
     }

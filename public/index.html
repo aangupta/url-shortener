@@ -16,20 +16,27 @@
     <nav class="navbar navbar-default">
         <div class="container-fuild">
             <div class="navbar-header">
-                <a href="index.html"><h3>Url Shortener  <i class="fas fa-tools" style="color: grey;"></i></h3></a>
+                <a href="index.html"><h3 style ="color: black;">Url Shortener  <i class="fas fa-tools" style="color: grey;"></i></h3></a>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <h2>Url Shortener</h2>
+        <h2 style="text-align: center; margin: 1.5rem;">Url Shortener</h2>
         <div class="content-box">
-          
-            <input type="text" name="url" id="url" placeholder="Shorten your link" required>
-            <input type="button" value="Shorten" id="shorten">
+            <div class = "content-box-input">
+                    <input type="text" name="url" id="url" placeholder="Shorten your link" required>
+                    <input type="button" value="Shorten" id="shorten">
+            </div>
+
+            <div class = "content-box-output">
+                <input type="text" name="longurl" id="longurl" placeholder="Long Url" style="width: 90%; padding: 1rem;">
+                <input type="text" name="shorturl" id="shorturl" placeholder="Short Url" style="width: 20%;">
+                <input type="button" value="Copy" id="copy">
+            </div>
         
         </div>
-        <div class="content-box">
+        <!--div class="content-box">
            <div>
                <label for="longurl"> Long url</label>
                <input type="text" name="longurl" id="longurl">
@@ -46,13 +53,27 @@
                     <input type="button" value="Copy" id="copy">
                 </span>
             </li-->
+        </div-->
+        <div class="content-box">
+            <div class ="content-search-input">
+                <input type="text" name="shorturl" id="searchurl" placeholder="Enter the short url" style="width: 20%;">
+                <input type="button" value="Search" id="search">
+            </div>
+            <div class ="content-search-output">
+                <input type="text" name="searchresult" id="searchresult" placeholder="Search result will be shown here" style=" width: 82%;">
+            </div>
         </div>
         <div class="content-box">
             <div class="urlPrint">
-                
+                <div class="urlPrint-header">
+                    <div>Long Url</div>
+                    <div>Short Url</div>
+                </div>
+                <div class="urlPrint-body">
+                    <div class ="longurlresult"id ="longurlprint"></div>
+                    <div class ="shorturlresult"id ="shorturlprint"></div>
+                </div>
             </div>
-
-           
         </div>
     </div>
     <script src="./static/js/script.js"></script>
