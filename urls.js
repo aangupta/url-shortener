@@ -3,7 +3,7 @@ const shortid = require('shortid');
 
 const router = express.Router();
 
-const urls = {};
+const { urls } = require('./urls_data');
 
 router.get('/', (req, res) => {
     const urlList = [];
