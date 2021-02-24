@@ -1,6 +1,6 @@
 document.querySelector('#shorten').addEventListener('click', () => {
     const url = document.querySelector('#url').value;
-    console.log(url);
+    /* console.log(url); */
     if (url === '') alert('Enter the URL');
     else {
         fetch('./api/urls/', {
@@ -14,7 +14,7 @@ document.querySelector('#shorten').addEventListener('click', () => {
         })
             .then((response) => response.json())
             .then((json) => {
-                console.log(url);
+                /* console.log(url); */
                 document.querySelector('#longurl').value = url;
                 document.querySelector('#shorturl').value = json.id;
                 document.querySelector('#copy').addEventListener('click', () => {

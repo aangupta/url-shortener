@@ -1,7 +1,6 @@
 /* eslint-disable import/no-unresolved */
 const express = require('express');
 const api = require('./api');
-const { urls } = require('./urls_data');
 
 const app = express();
 const port = process.env.PORT || 3000;
