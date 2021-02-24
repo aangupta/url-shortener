@@ -50,7 +50,7 @@ function printurl() {
 }
 
 document.querySelector('#search').addEventListener('click', () => {
-    const url = new URL('/api/urls/', 'https://url-shortform.herokuapp.com');
+    const url = new URL('/api/urls/', 'https://curtly.herokuapp.com/');
     const searchurl = document.querySelector('#searchurl');
     const param = { id: searchurl.value };
     Object.keys(param).forEach((key) => {
