@@ -1,5 +1,3 @@
-
-
 document.querySelector('#shorten').addEventListener('click', () => {
     const url = document.querySelector('#url').value;
     console.log(url);
