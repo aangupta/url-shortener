@@ -32,7 +32,8 @@ function printurl() {
         .then((response) => response.json())
         .then((urls) => {
             urls.forEach((element) => {
-                const shortcontent = document.createTextNode(element.id);
+                const shortid = document.createTextNode(element.id);
+                const shortcontent = `${document.location.origin}/u/${shortid}`;
                 const longcontent = document.createTextNode(element.longUrl);
                 const br = document.createElement('br');
                 const shorturl = document.querySelector('#shorturlprint');
