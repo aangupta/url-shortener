@@ -15,7 +15,7 @@ document.querySelector('#shorten').addEventListener('click', () => {
             .then((response) => response.json())
             .then((json) => {
                 /* console.log(url); */
-                document.querySelector('#longurl').value = url;
+                /*document.querySelector('#longurl').value = url; */
                 document.querySelector('#shorturl').value = `${document.location.origin}/u/${json.id}`;
                 document.querySelector('#copy').addEventListener('click', () => {
                     const copyText = document.querySelector('#shorturl');
@@ -42,13 +42,13 @@ function printurl() {
                 longurl.appendChild(br.cloneNode(true));
                 shorturl.appendChild(shortcontent);
                 shorturl.appendChild(br.cloneNode(true));
-                console.log(element.id);
-                console.log(element.longUrl);
+                /* console.log(element.id);
+                console.log(element.longUrl); */
             });
         });
 }
 
-document.querySelector('#search').addEventListener('click', () => {
+/* document.querySelector('#search').addEventListener('click', () => {
     const url = new URL('/api/urls/', 'https://curtly.herokuapp.com/');
     const searchurl = document.querySelector('#searchurl');
     const param = { id: searchurl.value };
@@ -67,4 +67,4 @@ document.querySelector('#search').addEventListener('click', () => {
                 }
             });
         });
-});
+}); */

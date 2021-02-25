@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 * {
   padding: 0;
@@ -8,20 +12,28 @@
 }
 
 body {
-  background: #f0f0f0;
+  background: #c7cfb7;
   font-family: 'Crimson Text', serif;
+}
+
+header {
+  margin-left: 1rem;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
 }
 
 .content-box {
-  margin: 4rem;
-  background: white;
-  padding: 2rem;
-  width: 100%;
+  margin: 3rem;
+  background: #f7f7e8;
+  padding: 1rem;
+  width: 80%;
 }
 
 .output {
@@ -56,24 +68,43 @@ select {
   display: inline-block;
   border-radius: 3px;
   box-sizing: border-box;
-  background: #d3d3d3;
+  background: #9dad7f;
   text-decoration: solid;
   text-align: center;
   color: black;
   margin: 1rem;
   width: 120px;
   height: 45px;
-  font-size: medium;
+  font-size: 2rem;
+  font-family: 'Kaushan Script', cursive;
 }
 
 .urlPrint {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.urlPrint-header {
-  display: grid;
-  grid-template-columns: 820px 120px;
+.longURL {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.shortURL {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.print-header {
   padding: 0.5rem;
   font-size: 20px;
   font-weight: bold;
@@ -81,25 +112,44 @@ select {
   text-align: center;
 }
 
-.urlPrint-body {
-  display: grid;
-  grid-template-columns: 820px 120px;
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
-  text-align: left;
-  padding: 1rem;
+.longurlresult {
+  display: inline-block;
   margin: 2rem;
+  padding: 1rem;
   font-size: 15px;
 }
 
-.longurlresult {
+.longurlresult a {
+  color: black;
+}
+
+.shorturlresult {
   display: inline-block;
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 15px;
+}
+
+.shorturlresult a {
+  color: black;
 }
 
 .content-box-input {
   margin: 2rem;
+  align-items: left;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.content-box-button {
+  margin: 2rem;
   align-items: center;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 5%;
 }
 
 .content-box-input input[type=text],
@@ -107,29 +157,77 @@ select {
   padding: 0.5rem;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 3px;
   box-sizing: border-box;
-  width: 82%;
-  margin-right: 20px;
-  margin-bottom: 0;
-  height: 60px;
+  width: 92%;
+  margin: 1rem;
+  height: 45px;
   background: #fff;
   font-size: 15px;
 }
 
-.content-box-output {
-  display: flex;
-  flex-direction: row;
-  margin: 2rem;
-  padding: 1rem;
-}
+@media (max-width: 760px) {
+  input[type=button],
+  select {
+    padding: 0.5rem;
+    display: inline-block;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background: #9dad7f;
+    text-decoration: solid;
+    text-align: center;
+    color: black;
+    margin: 1rem;
+    width: 80px;
+    height: 30px;
+    font-size: 1rem;
+    font-family: 'Kaushan Script', cursive;
+  }
 
-.content-search-input {
-  margin: 2rem;
-  padding: 1rem;
-}
+  .content-box-input input[type=text],
+  select {
+    padding: 0.5rem;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 92%;
+    margin: 1rem;
+    height: 30px;
+    background: #fff;
+    font-size: 10px;
+  }
 
-.content-search-output {
-  margin: 2rem;
-  padding: 1rem;
+  .print-header {
+    padding: 0.5rem;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 1rem;
+    text-align: center;
+  }
+
+  .longurlresult {
+    font-size: 10px;
+  }
+
+  .shorturlresult {
+    font-size: 10px;
+  }
+
+  .longURL {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    width: 60%;
+  }
+
+  .shortURL {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    width: 20%;
+  }
+
 }

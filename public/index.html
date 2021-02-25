@@ -13,27 +13,23 @@
     
 </head>
 <body onload="printurl()">
-    <nav class="navbar navbar-default">
-        <div class="container-fuild">
-            <div class="navbar-header">
-                <a href="index.html"><h3 style ="color: black;">URL Shortener  <i class="fas fa-tools" style="color: grey;"></i></h3></a>
-            </div>
-        </div>
-    </nav>
+    <header>
+        <a style = "text-decoration: none;" href= "index.html" ><h3 style ="color: black; font-family: 'Kaushan Script', cursive;">URL Shortener  <i class="fas fa-tools" style="color: black;"></i></h3></a>
+    </header>
 
     <div class="container">
-        <h2 style="text-align: center; margin: 1.5rem;">URL Shortener</h2>
-        <div class="content-box">
-            <div class = "content-box-input">
-                    <input type="text" name="url" id="url" placeholder="Shorten your link" required>
-                    <input type="button" value="Shorten" id="shorten">
-            </div>
+        <h2 style="text-align: center; margin: 1rem; font-family: 'Kaushan Script', cursive; color: black;">URL Shortener</h2>
+        <div class="content-box" style="display: flex; flex-direction: row;">
+           <div class="content-box-input">
+                <input type="text" name="url" id="url" placeholder="Shorten your link" required>
+                <input type="text" name="shorturl" id="shorturl" placeholder="Short URL" style="width: 50%;">
+           </div>
 
-            <div class = "content-box-output">
-                <input type="text" name="longurl" id="longurl" placeholder="Long URl" style="width: 90%; padding: 1rem;">
-                <input type="text" name="shorturl" id="shorturl" placeholder="Short URl" style="width: 20%;">
+           <div class="content-box-button">
+                <input type="button" value="Shorten" id="shorten">
                 <input type="button" value="Copy" id="copy">
-            </div>
+           </div>
+
         
         </div>
         <!--div class="content-box">
@@ -54,7 +50,7 @@
                 </span>
             </li-->
         </div-->
-        <div class="content-box">
+        <!--div class="content-box">
             <div class ="content-search-input">
                 <input type="text" name="shorturl" id="searchurl" placeholder="Enter the short url" style="width: 20%;">
                 <input type="button" value="Search" id="search">
@@ -62,18 +58,23 @@
             <div class ="content-search-output">
                 <input type="text" name="searchresult" id="searchresult" placeholder="Search result will be shown here" style=" width: 82%;">
             </div>
-        </div>
-        <div class="content-box">
+        </div-->
+        <div class="content-box"> 
             <div class="urlPrint">
-                <div class="urlPrint-header">
-                    <div>Long URL</div>
-                    <div>Short URL</div>
+                <div class="longURL">
+                    <div style="font-family: 'Kaushan Script', cursive;" class="print-header">Long URL</div>
+                    <div class ="longurlresult">
+                        <a id ="longurlprint" href=""></a>
+                    </div>
                 </div>
-                <div class="urlPrint-body">
-                    <div class ="longurlresult"id ="longurlprint"></div>
-                    <div class ="shorturlresult"id ="shorturlprint"></div>
+                <div class="shortURL">
+                    <div style="font-family: 'Kaushan Script', cursive;" class="print-header" >Short URL</div>
+                    <div class ="shorturlresult">
+                        <a id ="shorturlprint" href=""></a>
+                    </div>
                 </div>
             </div>
+            
         </div>
     </div>
     <script src="./static/js/script.js"></script>
