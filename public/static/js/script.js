@@ -16,7 +16,7 @@ document.querySelector('#shorten').addEventListener('click', () => {
             .then((json) => {
                 /* console.log(url); */
                 document.querySelector('#longurl').value = url;
-                document.querySelector('#shorturl').value = `${document.location.hostname}u${json.id}`;
+                document.querySelector('#shorturl').value = `${document.location.origin}u${json.id}`;
                 document.querySelector('#copy').addEventListener('click', () => {
                     const copyText = document.querySelector('#shorturl');
                     copyText.select();
