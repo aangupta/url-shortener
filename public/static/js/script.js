@@ -40,7 +40,9 @@ function printurl() {
                 const longurl = document.querySelector('#longurlprint');
                 longurl.appendChild(longcontent);
                 longurl.appendChild(br.cloneNode(true));
+                longurl.appendChild(br.cloneNode(true));
                 shorturl.appendChild(shortcontent);
+                shorturl.appendChild(br.cloneNode(true));
                 shorturl.appendChild(br.cloneNode(true));
                 /* console.log(element.id);
                 console.log(element.longUrl); */
