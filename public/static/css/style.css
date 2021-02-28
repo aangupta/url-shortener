@@ -11,162 +11,130 @@
   margin: 0;
 }
 
+html {
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
 body {
   background: #c7cfb7;
   font-family: 'Crimson Text', serif;
-}
-
-header {
-  margin-left: 1rem;
-}
-
-.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+header {
   margin: 0 auto;
+  box-sizing: border-box;
   width: 100%;
-  height: 100vh;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+a {
+  font-size: 30px;
+  color: black;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 900;
+}
+
+.container {
+  margin: 70px;
+  width: 100%;
+  align-items: center;
 }
 
 .content-box {
-  margin: 3rem;
   background: #f7f7e8;
-  padding: 1rem;
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 20px;
+  width: 90%;
+}
+
+.input {
+  width: 100%;
+  margin: 20px;
+  align-items: center;
 }
 
 .output {
-  list-style: none;
-}
-
-/* .content-box {
-  display: flex;
-  flex-direction: row;
+  width: 100%;
+  margin: 20px;
   align-items: center;
-  justify-content: space-between;
-} */
+}
 
 input[type=text],
 select {
-  padding: 0.5rem;
+  padding: 10px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-sizing: border-box;
-  width: 72%;
-  margin-right: 20px;
-  margin-bottom: 0;
-  height: 60px;
+  width: 90%;
+  height: 50px;
   font-size: 15px;
   background: #fff;
+  margin-right: 10px;
+  font-family: 'Crimson Text', serif;
 }
 
 input[type=button],
 select {
-  padding: 0.5rem;
+  padding: 10px;
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 4px;
   box-sizing: border-box;
-  background: #9dad7f;
   text-decoration: solid;
   text-align: center;
   color: black;
-  margin: 1rem;
-  width: 120px;
+  margin: 10px 0;
+  width: 90px;
   height: 45px;
-  font-size: 2rem;
-  font-family: 'Kaushan Script', cursive;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Crimson Text', serif;
+  background: #9dad7f;
 }
 
 .urlPrint {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   width: 100%;
 }
 
 .longURL {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  margin: 2rem;
-  justify-content: space-evenly;
-  align-items: center;
+  width: 70%;
+  float: right;
+  padding: 10px;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: black;
+  overflow-x: hidden;
+  word-wrap: break-word;
 }
 
 .shortURL {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  margin: 2rem;
-  justify-content: space-evenly;
-  align-items: center;
+  width: 30%;
+  float: left;
+  padding: 10px;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: black;
+  overflow-x: hidden;
+  word-wrap: break-word;
 }
 
 .print-header {
-  padding: 0.5rem;
   font-size: 20px;
-  font-weight: bold;
-  margin: 2rem;
-  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 800;
 }
 
-.longurlresult {
-  display: inline-block;
-  margin: 2rem;
-  padding: 1rem;
-  font-size: 15px;
-}
-
-.longurlresult a {
-  color: black;
-}
-
-.shorturlresult {
-  display: inline-block;
-  margin: 2rem;
-  padding: 1rem;
-  font-size: 15px;
-}
-
-.shorturlresult a {
-  color: black;
-}
-
-.content-box-input {
-  margin: 2rem;
-  align-items: left;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-}
-
-.content-box-button {
-  margin: 2rem;
-  align-items: center;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  width: 5%;
-}
-
-.content-box-input input[type=text],
-select {
-  padding: 0.5rem;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
-  width: 92%;
-  margin: 1rem;
-  height: 45px;
-  background: #fff;
-  font-size: 15px;
-}
-
-@media (max-width: 760px) {
+/* @media (max-width: 760px) {
   input[type=button],
   select {
     padding: 0.5rem;
@@ -229,5 +197,4 @@ select {
     margin-left: 1rem;
     width: 20%;
   }
-
-}
+} */
