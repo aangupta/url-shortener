@@ -34,12 +34,12 @@ footer {
 }
 
 body {
-  background: var(--grey);
+  background: white;
   font-family: var(--ff-body);
   font-weight: 400;
   font-size: 1.3125 rem;
   line-height: 1.6;
-  height: 100vh;
+  min-height: 100%;
 }
 
 h2 {
@@ -59,9 +59,10 @@ header {
 
 .container {
   width: 100%;
-  padding: 3rem 0;
   background: var(--grey);
   margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 3rem 0;
 }
 
 .content-box {
@@ -74,6 +75,7 @@ header {
   border-radius: 8px;
   width: 80%;
   background-color: white;
+  overflow: scroll;
 }
 
 .input,
@@ -130,7 +132,6 @@ select {
   font-family: var(--ff-body);
   color: black;
   width: 100%;
-  border: 2px solid var(--darkgrey);
   padding: 2rem;
   padding-left: 4rem;
   font-size: 15px;
@@ -145,9 +146,11 @@ footer {
   align-content: center;
   padding: 1rem;
   width: 100%;
-  position: absolute;
-  left: 0;
   bottom: 0;
+  left: 0;
+  position: fixed;
+  clear: both;
+  margin-top: auto;
 }
 
 .footer-text {
@@ -156,6 +159,7 @@ footer {
 
 .footer-icons {
   margin: 0 auto;
+  align-items: center;
 }
 
 .footer-text h4 {
@@ -165,6 +169,7 @@ footer {
 .footer-icons ul {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .footer-icons ul li {
