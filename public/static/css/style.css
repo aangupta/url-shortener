@@ -75,7 +75,6 @@ header {
   border-radius: 8px;
   width: 80%;
   background-color: white;
-  overflow: scroll;
 }
 
 .input,
@@ -136,6 +135,7 @@ select {
   padding-left: 4rem;
   font-size: 15px;
   overflow-x: hidden;
+  overflow: scroll;
 }
 
 footer {
