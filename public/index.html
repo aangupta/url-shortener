@@ -9,43 +9,53 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./static/css/style.css">
 </head>
 <body onload="printurl()">
     <header>
-        <a style = "text-decoration: none;" href= "index.html" class = "title" >URL Shortener  <i class="fas fa-tools" style="color: black;"></i></a>
+        <a style = "text-decoration: none;" href= "index.html" class = "title" > <h2>URL Shortener</h2></a>
     </header>
 
-    <div class="conatiner">
+    <div class="container">
         <div class="content-box">
             <div class="input">
-                <input type="text" name="url" id="url" placeholder="Shorten your link" required>
+                <input type="text"  required  autofocus spellcheck ='false' name="url" id="url" placeholder="Shorten your link">
                 <input type="button" value="Shorten" id="shorten">
                
            </div>
 
            <div class="output">
-                <input type="text" name="shorturl" id="shorturl" placeholder="Short URL" readonly>
+                <input type="text" name="shorturl" id="shorturl" placeholder="Short URL" readonly style = 'width: 50%;'>
                 <input type="button" value="Copy" id="copy">
            </div>
 
         </div>
 
         <div class="content-box"> 
-            <div class="urlPrint">
-                <div class="longURL">
-                    <div class="print-header">Long URL</div>
-                    <div class ="longurlresult"id ="longurlprint"></div>
-                </div>
-                <div class="shortURL">
-                    <div class="print-header" >Short URL</div>
-                    <div class ="shorturlresult"id ="shorturlprint"></div>
-                </div>
+            <div class = "db-header">
+                <h2>URL Shortener Database</h2>
             </div>
             
+               <div class="result" id ='result'></div>
         </div>
 
     </div>
+    <footer>
+        <div class="footer-text">
+            <h4>Made with <span class="fas fa-heart"></span> by Aanchal</h4>
+            <hr>
+        </div>
+        <div class="footer-icons">
+            <ul>
+                <li> <a href="https://github.com/aangupta"class="fa fa-github"target="_blank"></a></li>
+                <li> <a href="https://www.linkedin.com/in/aanchal-gupta-3ab35bb1/" class="fa fa-linkedin" target="_blank"></a></li>
+                <li><a href="https://twitter.com/aangupta5"class="fa fa-twitter"target="_blank"></a> </li>
+                <li> <a href="mailto: aanchalgupta457@gmail.com" class="fa fa-envelope" target="_blank"></a> </li>
+            </ul>
+            
+        </div>
+    </footer>
     <script src="./static/js/script.js"></script>
 </body>
 </html>

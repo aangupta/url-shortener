@@ -1,8 +1,14 @@
+function changeButtonText() {
+    setTimeout(() => {
+        document.querySelector('#copy').value = 'Copy';
+    }, 3000);
+}
+
 document.querySelector('#shorten').addEventListener('click', () => {
     const url = document.querySelector('#url').value;
-    /* console.log(url); */
-    if (url === '') alert('Enter the URL');
-    else {
+    if (!url) {
+        window.alert('Enter the log URL');
+    } else {
         fetch('./api/urls/', {
             method: 'POST',
             body: JSON.stringify({
@@ -14,14 +20,13 @@ document.querySelector('#shorten').addEventListener('click', () => {
         })
             .then((response) => response.json())
             .then((json) => {
-                /* console.log(url); */
-                /*document.querySelector('#longurl').value = url; */
                 document.querySelector('#shorturl').value = `${document.location.origin}/u/${json.id}`;
                 document.querySelector('#copy').addEventListener('click', () => {
                     const copyText = document.querySelector('#shorturl');
                     copyText.select();
                     document.execCommand('copy');
-                    alert(`Copied the text: ${copyText.value}`);
+                    document.querySelector('#copy').value = 'Copied';
+                    changeButtonText();
                 });
             });
     }
@@ -36,19 +41,28 @@ function printurl() {
                 const shortcontent = document.createTextNode(shortid);
                 const longcontent = document.createTextNode(element.longUrl);
                 const br = document.createElement('br');
-                const shorturl = document.querySelector('#shorturlprint');
-                const longurl = document.querySelector('#longurlprint');
-                longurl.appendChild(longcontent);
-                longurl.appendChild(br.cloneNode(true));
-                longurl.appendChild(br.cloneNode(true));
-                shorturl.appendChild(shortcontent);
-                shorturl.appendChild(br.cloneNode(true));
-                shorturl.appendChild(br.cloneNode(true));
+                /* const shorturl = document.querySelector('#shorturlprint');
+                const longurl = document.querySelector('#longurlprint'); */
+                const result = document.querySelector('#result');
+                const text1 = document.createTextNode('Long URL: ');
+                const text2 = document.createTextNode('Short URL: ');
+                result.appendChild(text1);
+                result.appendChild(br.cloneNode(true));
+                result.appendChild(longcontent);
+                result.appendChild(br.cloneNode(true));
+                result.appendChild(text2);
+                result.appendChild(br.cloneNode(true));
+                result.appendChild(shortcontent);
+                result.appendChild(br.cloneNode(true));
+                result.appendChild(br.cloneNode(true));
+                result.appendChild(br.cloneNode(true));
+
                 /* console.log(element.id);
                 console.log(element.longUrl); */
             });
         });
 }
+
 
 /* document.querySelector('#search').addEventListener('click', () => {
     const url = new URL('/api/urls/', 'https://curtly.herokuapp.com/');
