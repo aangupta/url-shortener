@@ -145,7 +145,7 @@ footer {
   align-content: center;
   padding: 1rem;
   width: 100%;
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
 }
