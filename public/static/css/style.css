@@ -146,6 +146,8 @@ footer {
   padding: 1rem;
   width: 100%;
   position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 .footer-text {
